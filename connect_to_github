@@ -1,0 +1,11 @@
+$ ls -al ~/.ssh  查看是否已经有id_rsa id_rsa.pub这样的私钥（在git目录下）
+$ ssh-keygen -t rsa -b 4096 -C "zhiwei_wang@tianma.cn"  生成公钥
+$  eval $(ssh-agent -s) 启动ssh代理
+$  ssh-add ~/.ssh/id_rsa  生成私钥 默认/c/.ssh/id_rsa，询问文件名时，直接enter，如此便会生成默认的id_rsa等文件了。
+$ ls -al ~/.ssh  查看是否已经有id_rsa id_rsa.pub这样的私钥（在git目录下）
+$ clip < ~/.ssh/id_rsa.pub 将生成的私钥复制到剪切板
+$  ssh git@github.com  尝试连接服务器，成功。若不成功可加-vT查看原因。
+
+
+
+
